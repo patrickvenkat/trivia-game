@@ -2,7 +2,7 @@
     background-color: gray; 
     border: 2px;
 }
-#game-header, #score, #timekeeper{
+#game-header, #score, #timekeeper, #question-header{
     /* width: 60%; */
     color: white;
     font-weight: 100;

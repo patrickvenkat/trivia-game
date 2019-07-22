@@ -13,30 +13,60 @@ var triviaQuestions = [{
     answer4: "Microsoft",
     correctAnswer: "Microsoft"
     }, {
-    Question: "3rd question",
-    answer1: "ans1",
-    answer2: "ans2",
-    answer3: "ans3",
-    answer4: "ans4",
-    correctAnswer: "ans2"
+    Question: "1st row 3rd question",
+    answer1: "ans131",
+    answer2: "ans132",
+    answer3: "ans132",
+    answer4: "ans134",
+    correctAnswer: "ans132"
     }, {
-    Question: "4th question",
-    answer1: "ans14",
-    answer2: "ans24",
-    answer3: "ans34",
-    answer4: "ans44",
-    correctAnswer: "ans34"
+    Question: "1st row 4th question",
+    answer1: "ans141",
+    answer2: "ans142",
+    answer3: "ans143",
+    answer4: "ans144",
+    correctAnswer: "ans141"
+    }, {
+    Question: "2nd row 1st question",
+    answer1: "ans211",
+    answer2: "ans212",
+    answer3: "ans213",
+    answer4: "ans214",
+    correctAnswer: "ans214"
+    }, {
+    Question: "2nd row 2nd question",
+    answer1: "ans221",
+    answer2: "ans222",
+    answer3: "ans223",
+    answer4: "ans224",
+    correctAnswer: "ans222"
+    }, {
+    Question: "2nd row 3rd question",
+    answer1: "ans231",
+    answer2: "ans232",
+    answer3: "ans233",
+    answer4: "ans234",
+    correctAnswer: "ans232"
+    }, {
+    Question: "2nd row 4th question",
+    answer1: "ans241",
+    answer2: "ans242",
+    answer3: "ans243",
+    answer4: "ans244",
+    correctAnswer: "ans243"
     }]
 
     var dollarWins = 0;
     var questionAmount = 0;
     var i; //Question Index
     var timerID;
-    var timeRemaining = 10;
+    var timeRemaining = 0;
     answersLocked = true;
 
+    $("#game-header").blink;
+
     $("#row1-q1").on("click", function (){
-        if (!($("#row1-q1").text() == "Answered")) {
+        if (!($("#row1-q1").text() == "Answered") && (timeRemaining === 0)){
             i = 0;
             timeRemaining = 10;
             questionSelection(i, "#row1-q1");
@@ -46,7 +76,7 @@ var triviaQuestions = [{
     });
 
     $("#row1-q2").on("click", function (){
-        if (!($("#row1-q2").text() == "Answered")) {
+        if (!($("#row1-q2").text() == "Answered") && (timeRemaining === 0)){
             i = 1;
             timeRemaining = 10;
             questionSelection(i, "#row1-q2");
@@ -56,7 +86,7 @@ var triviaQuestions = [{
     });
 
     $("#row1-q3").on("click", function (){
-        if (!($("#row1-q3").text() == "Answered")) {
+        if (!($("#row1-q3").text() == "Answered") && (timeRemaining === 0)){
             i = 2;
             timeRemaining = 10;
             questionSelection(i, "#row1-q3");
@@ -66,10 +96,50 @@ var triviaQuestions = [{
     });
 
     $("#row1-q4").on("click", function (){
-        if (!($("#row1-q4").text() == "Answered")) {
+        if (!($("#row1-q4").text() == "Answered") && (timeRemaining === 0)){
             i = 3;
             timeRemaining = 10;
             questionSelection(i, "#row1-q4");
+            questionAmount = 100;
+            timeKeeperFunction();
+        }
+    });
+
+    $("#row2-q1").on("click", function (){
+        if (!($("#row2-q1").text() == "Answered") && (timeRemaining === 0)){
+            i = 4;
+            timeRemaining = 10;
+            questionSelection(i, "#row2-q1");
+            questionAmount = 100;
+            timeKeeperFunction();
+        }
+    });
+
+    $("#row2-q2").on("click", function (){
+        if (!($("#row2-q2").text() == "Answered") && (timeRemaining === 0)){
+            i = 5;
+            timeRemaining = 10;
+            questionSelection(i, "#row2-q2");
+            questionAmount = 100;
+            timeKeeperFunction();
+        }
+    });
+
+    $("#row2-q3").on("click", function (){
+        if (!($("#row2-q3").text() == "Answered") && (timeRemaining === 0)){
+            i = 6;
+            timeRemaining = 10;
+            questionSelection(i, "#row2-q3");
+            questionAmount = 100;
+            timeKeeperFunction();
+        }
+    });
+
+    $("#row2-q4").on("click", function (){
+        if (!($("#row2-q4").text() == "Answered") && (timeRemaining === 0)){
+            i = 7;
+            timeRemaining = 10;
+            questionSelection(i, "#row2-q4");
             questionAmount = 100;
             timeKeeperFunction();
         }
@@ -139,13 +209,14 @@ var triviaQuestions = [{
         if (answer === triviaQuestions[i].correctAnswer){
             dollarWins += amount;
             console.log(dollarWins);
-            $("#score").html("<h1>winnings = $"  + dollarWins + "</h1>");
+            $("#score").html("<h1>Winnings = $"  + dollarWins + "</h1>");
             clearTimerID();
-            $("#timekeeper").html("<h1>Good Job! You got it right. Make another selection.</h1>");
+            $("#timekeeper").html("<h1>Good Job!. Make another selection from the board.</h1>");
+            timeRemaining = 0;
         }
         else {
             clearTimerID();
-            $("#timekeeper").html("<h1>Sorry. Incorrect!. Make another selection.</h1>");
+            $("#timekeeper").html("<h1>Incorrect!. Make another selection from the board.</h1>");
         }
     }       
     
@@ -176,7 +247,7 @@ var triviaQuestions = [{
         
         //  Once number hits zero...
         if (timeRemaining === 0) {
-            $("#timekeeper").html("<h1>Sorry. You timed out. Please make another selection.</h1>");
+            $("#timekeeper").html("<h1>You timed out. Please make another selection from the board.</h1>");
             clearTimerID();
             lockTheAnswers ();
         }
