@@ -63,7 +63,7 @@ var triviaQuestions = [{
     var timeRemaining = 0;
     answersLocked = true;
 
-    $("#game-header").blink;
+    showRows();
 
     $("#row1-q1").on("click", function (){
         if (!($("#row1-q1").text() == "Answered") && (timeRemaining === 0)){
@@ -213,10 +213,13 @@ var triviaQuestions = [{
             clearTimerID();
             $("#timekeeper").html("<h1>Good Job!. Make another selection from the board.</h1>");
             timeRemaining = 0;
+            showRows();
         }
         else {
             clearTimerID();
             $("#timekeeper").html("<h1>Incorrect!. Make another selection from the board.</h1>");
+            timeRemaining = 0;
+            showRows();
         }
     }       
     
@@ -234,6 +237,7 @@ var triviaQuestions = [{
         $("#answer-4").html("d)" + triviaQuestions[i].answer4);
         $("#answer-4").css("color", "black");
         $("#answer-4").css("font-size", "25px");
+        collapseRows();
     }
     
     function timeKeeperFunction() {
@@ -250,6 +254,7 @@ var triviaQuestions = [{
             $("#timekeeper").html("<h1>You timed out. Please make another selection from the board.</h1>");
             clearTimerID();
             lockTheAnswers ();
+            showRows();
         }
     }
 
@@ -291,4 +296,18 @@ var triviaQuestions = [{
         }
 
         answersLocked = true;
+    };
+
+    function showRows(){
+        $("#row0").removeClass('d-none');
+        $("#row1").removeClass('d-none');
+        $("#row2").removeClass('d-none');
+        $("#row3").removeClass('d-none');
+    };
+
+    function collapseRows(){
+        $("#row0").addClass('d-none');
+        $("#row1").addClass('d-none');
+        $("#row2").addClass('d-none');
+        $("#row3").addClass('d-none');
     };
