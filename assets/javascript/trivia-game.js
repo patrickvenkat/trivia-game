@@ -1,87 +1,87 @@
 var triviaQuestions = [{
-    Question: "Which company has the most recognized brand in the world?",
-    answer1: "Google",
-    answer2: "Amazon",
-    answer3: "Apple",
-    answer4: "Snapchat",
-    correctAnswer: "Google"
+        Question: "Which actor/actress has the most oscars in any category?",
+        answer1: "Tom Hanks",
+        answer2: "Katharine Hepburn",
+        answer3: "Meryl Streep",
+        answer4: "Beetlejuice",
+        correctAnswer: "Katharine Hepburn"
     }, {
-    Question: "Which company is the most valuable company in the world?",
-    answer1: "Exxon Mobil",
-    answer2: "Alibaba",
-    answer3: "Apple",
-    answer4: "Microsoft",
-    correctAnswer: "Microsoft"
+        Question: "Whos is the world's highest paid athlete?",
+        answer1: "Aaron Rodgers",
+        answer2: "Lionel Messi",
+        answer3: "Roger Federer",
+        answer4: "Lebron James",
+        correctAnswer: "Lionel Messi"
     }, {
-    Question: "1st row 3rd question",
-    answer1: "ans131",
-    answer2: "ans132",
-    answer3: "ans132",
-    answer4: "ans134",
-    correctAnswer: "ans132"
+        Question: "Whos is the world's highest paid musician?",
+        answer1: "Taylor Swift",
+        answer2: "Jay-Z",
+        answer3: "Bruno Mars",
+        answer4: "U2",
+        correctAnswer: "U2"
     }, {
-    Question: "1st row 4th question",
-    answer1: "ans141",
-    answer2: "ans142",
-    answer3: "ans143",
-    answer4: "ans144",
-    correctAnswer: "ans141"
+        Question: "Who cofounded Google?",
+        answer1: "Larry Page",
+        answer2: "Steve Jobs",
+        answer3: "Elon Musk",
+        answer4: "Cap'n Crunch",
+        correctAnswer: "Larry Page"
     }, {
-    Question: "2nd row 1st question",
-    answer1: "ans211",
-    answer2: "ans212",
-    answer3: "ans213",
-    answer4: "ans214",
-    correctAnswer: "ans214"
+        Question: "Which actor is the highest grossing of all time for their movies?",
+        answer1: "John Travolta",
+        answer2: "Tom Cruise",
+        answer3: "Samuel L. Jackson",
+        answer4: "Danny Devito",
+        correctAnswer: "Samuel L. Jackson"
     }, {
-    Question: "2nd row 2nd question",
-    answer1: "ans221",
-    answer2: "ans222",
-    answer3: "ans223",
-    answer4: "ans224",
-    correctAnswer: "ans222"
+        Question: "Who has the most number of olympic medals?",
+        answer1: "Usain Bolt",
+        answer2: "Katie Ledecky",
+        answer3: "Michael Phelps",
+        answer4: "Carl Lewis",
+        correctAnswer: "Michael Phelps"
     }, {
-    Question: "2nd row 3rd question",
-    answer1: "ans231",
-    answer2: "ans232",
-    answer3: "ans233",
-    answer4: "ans234",
-    correctAnswer: "ans232"
+        Question: "Which muscian has the most number of Grammys?",
+        answer1: "Beyonce Knowles",
+        answer2: "Quincy Jones",
+        answer3: "Georg Solti",
+        answer4: "Bubba Gump",
+        correctAnswer: "Georg Solti"
     }, {
-    Question: "2nd row 4th question",
-    answer1: "ans241",
-    answer2: "ans242",
-    answer3: "ans243",
-    answer4: "ans244",
-    correctAnswer: "ans243"
+        Question: "Who is the richest business man in the world?",
+        answer1: "Bill Gates",
+        answer2: "Warren Buffet",
+        answer3: "Jeff Bezos",
+        answer4: "Super Man",
+        correctAnswer: "Jeff Bezos"
     }, {
-    Question: "3rd row 1st question",
-    answer1: "ans311",
-    answer2: "ans312",
-    answer3: "ans313",
-    answer4: "ans314",
-    correctAnswer: "ans314"
+        Question: "Which actor has the highest net worth?",
+        answer1: "Shah Rukh Khan",
+        answer2: "George Clooney",
+        answer3: "Mel Gibson",
+        answer4: "Adam Sandler",
+        correctAnswer: "Shah Rukh Khan"
     }, {
-    Question: "3rd row 2nd question",
-    answer1: "ans321",
-    answer2: "ans322",
-    answer3: "ans323",
-    answer4: "ans324",
-    correctAnswer: "ans222"
+        Question: "Which athlete has the most number of instagram followers?",
+        answer1: "Cristiano Ronaldo",
+        answer2: "Lebron James",
+        answer3: "Tiger Woods",
+        answer4: "David Beckham",
+        correctAnswer: "Cristiano Ronaldo"
     }, {
-    Question: "3rd row 3rd question",
-    answer1: "ans331",
-    answer2: "ans332",
-    answer3: "ans333",
-    answer4: "ans334",
-    correctAnswer: "ans332"
+        Question: "Who is the richest musician in the world?",
+        answer1: "Violin Man",
+        answer2: "Jay-Z",
+        answer3: "Paul McCartney",
+        answer4: "Andrew Lloyd Webber",
+        correctAnswer: "Andrew Lloyd Webber"
     }, {
-    Question: "3rd row 4th question",
-    answer1: "ans341",
-    answer2: "ans342",
-    answer3: "ans343",
-    answer4: "ans344",
-    correctAnswer: "ans343"
+        Question: "Which company makes Post-It notes?",
+        answer1: "3M",
+        answer2: "International Paper Company",
+        answer3: "Michael's Arts and Crafts",
+        answer4: "The Paper Store",
+        correctAnswer: "3M"
     }]
 
     var dollarWins = 0;
@@ -140,7 +140,7 @@ var triviaQuestions = [{
             i = 4;
             timeRemaining = 10;
             questionSelection(i, "#row2-q1");
-            questionAmount = 100;
+            questionAmount = 200;
             timeKeeperFunction();
         }
     });
@@ -150,7 +150,7 @@ var triviaQuestions = [{
             i = 5;
             timeRemaining = 10;
             questionSelection(i, "#row2-q2");
-            questionAmount = 100;
+            questionAmount = 200;
             timeKeeperFunction();
         }
     });
@@ -160,7 +160,7 @@ var triviaQuestions = [{
             i = 6;
             timeRemaining = 10;
             questionSelection(i, "#row2-q3");
-            questionAmount = 100;
+            questionAmount = 200;
             timeKeeperFunction();
         }
     });
@@ -170,7 +170,7 @@ var triviaQuestions = [{
             i = 7;
             timeRemaining = 10;
             questionSelection(i, "#row2-q4");
-            questionAmount = 100;
+            questionAmount = 200;
             timeKeeperFunction();
         }
     });
@@ -180,7 +180,7 @@ var triviaQuestions = [{
             i = 8;
             timeRemaining = 10;
             questionSelection(i, "#row3-q1");
-            questionAmount = 100;
+            questionAmount = 300;
             timeKeeperFunction();
         }
     });
@@ -190,7 +190,7 @@ var triviaQuestions = [{
             i = 9;
             timeRemaining = 10;
             questionSelection(i, "#row3-q2");
-            questionAmount = 100;
+            questionAmount = 300;
             timeKeeperFunction();
         }
     });
@@ -200,7 +200,7 @@ var triviaQuestions = [{
             i = 10;
             timeRemaining = 10;
             questionSelection(i, "#row3-q3");
-            questionAmount = 100;
+            questionAmount = 300;
             timeKeeperFunction();
         }
     });
@@ -210,7 +210,7 @@ var triviaQuestions = [{
             i = 11;
             timeRemaining = 10;
             questionSelection(i, "#row3-q4");
-            questionAmount = 100;
+            questionAmount = 300;
             timeKeeperFunction();
         }
     });
