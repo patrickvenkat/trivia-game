@@ -330,10 +330,16 @@ var triviaQuestions = [{
         //  Once number hits zero...
         if (timeRemaining === 0) {
             $("#timekeeper").html("<h1>You timed out. Please make another selection from the board.</h1>");
+            countAnswered ++;
+            if (countAnswered === triviaQuestions.length){
+                $("#timekeeper").html("<h1>Game complete!</h1>");
+            }
             clearTimerID();
             lockTheAnswers ();
             showRows();
         }
+        
+
     }
 
     function clearTimerID() {
